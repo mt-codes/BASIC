@@ -2,15 +2,32 @@
 <html lang='en'>
 
 <head>
-	<meta charset="utf-8">
-	<meta content="IE=edge" http-equiv="X-UA-Compatible">
-	<meta name="description" content="Free Web tutorials">
-    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
-    <meta name="author" content="John Doe">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Title</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<!--[if IE]>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/ico" href="{% static 'favicon/favicon.ico' %}">
+    <title>Title</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- GOOGLE FONTS -->m
+
+    <!-- META FOR SOCIAL SHARING -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ x.title }}" />
+    <meta name="twitter:image" content="{{ x.image.url }}" />
+
+    <meta property="og:title" content="{{ x.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="{{ x.image.url }}" />
+    <meta property='og:description' content="{{ x.title }} | " />
+
+    <!--[if IE]>
 	<link href="styles/ie-styles.css" rel="stylesheet" type="text/css">
 	<script src="script/ie-script.js></script>
 	<![endif]-->
@@ -20,7 +37,7 @@
 
 
 
-	<script src=''></script>
+    <script src=''></script>
 </body>
 
 </html>
